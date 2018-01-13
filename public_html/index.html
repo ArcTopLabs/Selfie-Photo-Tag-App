@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Selfie Photo Tag App </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1> Selfie Photo Tag App </h1>
+                    <p class="lead">Selfie Photo Tag App's Data solution build on top of ArcTop Labs #DataSolution #MasterDataNode EcoSystem</p>
+
+
+
+                </div>
+            </div>
+            <div class="row">
+                <form action="" method="post" id="myform" role="form">
+                    <fieldset><legend class="text-center">Take a Selfie and Tag your photo. <span class="req"><small> required fields*</small></span></legend>
+
+                        <div class="col-md-6 ">
+
+                            <div class="imageContainer">
+                                <div class="app">
+
+                                    <a href="#" id="start-camera" class="visible">Touch here to start the app.</a>
+                                    <video id="camera-stream"></video>
+
+
+
+                                    <img id="snap">
+
+                                    <p id="error-message"></p>
+
+                                    <div class="controls">
+                                        <a href="#" id="delete-photo" title="Delete Photo" class="disabled"><i class="material-icons">delete</i></a>
+                                        <a href="#" id="take-photo" title="Take Photo"><i class="material-icons">camera_alt</i></a>
+                                        <a href="#" id="download-photo" download="selfie.png" title="Save Photo" class="disabled"><i class="material-icons">file_download</i></a>  
+                                    </div>
+
+                                    <!-- Hidden canvas element. Used for taking snapshot of video. -->
+                                    <canvas></canvas>
+
+                                </div>
+
+
+                            </div>
+                        </div><!-- ends col-6 --><!-- ends col-6 -->
+
+                        <div class="col-md-6 ">
+
+                            <div class="form-group"> 	 
+                                <label for="firstname"><span class="req">* </span> First name: </label>
+                                <input class="form-control" type="text" name="firstname" id = "fname" onkeyup = "Validate(this)" placeholder="First name ...." required /> 
+                                <div id="errFirst"></div>    
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastname"><span class="req">* </span> Last name: </label> 
+                                <input class="form-control" type="text" name="lastname" id = "lname" onkeyup = "Validate(this)" placeholder="Last name ...." required />  
+                                <div id="errLast"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tag"><span class="req"></span> Tag : </label>
+                                <input name="tag" id="tag" type="text" class="form-control inputpass" placeholder="Use this field as custom data"  id="custom" />
+                                <span id="confirmMessage" class="confirmMessage"></span>
+                            </div>
+
+
+                            <div class="form-group">
+                                <input class="btn btn-success" type="submit" name="submit_reg" id="submit_reg" value="Register">
+                            </div>
+
+
+                        </div>
+
+
+                    </fieldset>
+                </form><!-- ends register form -->
+
+                <div class="col-md-12">
+                    <h3 class="page-header">Selfie photo Data </h3>
+                    <p>Click to view the Selfie photo data <a href="registered_data.html" title="github" target="_blank">Click here >></a></a></p>
+
+                </div>
+
+            </div>
+        </div>
+        <link href="css/index.css" rel="stylesheet">
+        <script src="js/default.js"></script>
+        <script src="js/arctoplabs.js"></script>
+        <script>
+                                    html5datatable.restData();
+        </script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

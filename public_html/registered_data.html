@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+
+        <title>Selfie Photo Tag App using MasterDataNode</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <style type="text/css">
+
+        </style>
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="js/arctoplabs.js"></script>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+
+
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h1> Selfie Photo Tag App </h1>
+                            <p class="lead">Selfie Photo Tag App's Data solution build on top of ArcTop Labs #DataSolution #MasterDataNode EcoSystem</p>
+
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="row" id="cardView">
+
+                    </div>
+
+
+                    <div class="clearfix"></div>
+                    <div id="pagination">
+
+                        <label for="perPage"  class="pagination pull-left"> Data per Page</label>
+                        <select  class="pagination pull-left input-default" style="margin-left: 5px" id="perPage">
+                            <option>3</option>
+                            <option>10</option>
+                            <option>20</option>
+
+                        </select>
+
+                        <ul class="pagination pull-right">
+                            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+
+                            <!--<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>-->
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                        <h4 class="modal-title custom_align" id="Heading">Edit Your Detail</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="nameUpdate">Name:</label>
+                            <input class="form-control " id="nameUpdate" placeholder="Name ....." type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="usernameUpdate">User Name:</label>
+                            <input class="form-control " id="usernameUpdate" placeholder="User Name ....." type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="ageUpdate">Age:</label>
+                            <input class="form-control " id="ageUpdate" placeholder="Age ....." type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="addressUpdate">Address:</label>
+                            <textarea rows="2" class="form-control"  id="addressUpdate" placeholder="Address ......"></textarea>
+                            <input class="form-control " id="emailUpdate" type="hidden">
+
+                        </div>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" id="update" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span>&nbsp;Update</button>
+                    </div>
+                </div>
+                <!-- /.modal-content --> 
+            </div>
+            <!-- /.modal-dialog --> 
+        </div>
+
+
+
+
+        <div class="modal fade" id="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>One fine body&hellip;</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+        <script>
+            html5datatable.showData();
+        </script>
+    </body>
+</html>
